@@ -1,0 +1,68 @@
+@mixin poppins($style, $weight, $name, $local...) {
+	font: {
+		family: _font(poppin);
+		style: $style;
+  		weight: $weight;
+	}
+
+	src: url('../../fonts/poppins/poppins-v5-latin-#{$name}.eot'); /* IE9 Compat Modes */
+		src: $local,
+   		 url('../../fonts/poppins/poppins-v5-latin-#{$name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   		 url('../../fonts/poppins/poppins-v5-latin-#{$name}.woff2') format('woff2'), /* Super Modern Browsers */
+   		 url('../../fonts/poppins/poppins-v5-latin-#{$name}.woff') format('woff'), /* Modern Browsers */
+   		 url('../../fonts/poppins/poppins-v5-latin-#{$name}.ttf') format('truetype'), /* Safari, Android, iOS */
+   		 url('../../fonts/poppins/poppins-v5-latin-#{$name}.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+/* set box sizing */
+@mixin box_sizing($prop: box-sizing) {
+	@each $box in -webkit-box-sizing, -moz-box-sizing, box-sizing {
+         #{$box}: $prop;
+   	}
+}
+
+/* set none styles */ 
+@mixin none($props...) {
+	@each $prop in $props {
+		#{$prop}: none;
+	}
+}
+
+/* set border radius */
+@mixin border_radius($unit) {
+	-webkit-border-radius: #{$unit};
+    -moz-border-radius: #{$unit};
+    border-radius: #{$unit};
+}
+
+/* set transitions */
+@mixin transition($time) {
+	-webkit-transition: all #{$time} ease;
+    -o-transition: all #{$time} ease;
+    -moz-transition: all #{$time} ease;
+    transition: all #{$time} ease;
+}
+
+/* set translate */
+@mixin translate($direction) {
+	-webkit-transform: translate(#{$direction}, #{$direction});
+    -moz-transform: translate(#{$direction}, #{$direction});
+    -ms-transform: translate(#{$direction}, #{$direction});
+    -o-transform: translate(#{$direction}, #{$direction});
+    transform: translate(#{$direction}, #{$direction});
+}
+
+@mixin flexing_dp {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* query */
+@mixin query($query, $val) {
+	@media (#{$query}-width: #{$val}) {
+		@content;
+	}
+}

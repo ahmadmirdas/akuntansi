@@ -1,0 +1,35 @@
+@media (max-width: 767px) {
+    @for $px from 0 through 50 {
+        .p-xs-b-#{$px * 5} {
+            padding-bottom: #{$px * 5}px;
+        }
+
+        .p-xs-t-#{$px * 5} {
+            padding-top: #{$px * 5}px;
+        }
+
+        .p-xs-r-#{$px * 5} {
+            padding-right: #{$px * 5}px;
+        }
+
+        .p-xs-l-#{$px * 5} {
+            padding-left: #{$px * 5}px;
+        }
+
+        .m-xs-b-#{$px * 5} {
+            margin-bottom: #{$px * 5}px;
+        }
+
+        .m-xs-t-#{$px * 5} {
+            margin-top: #{$px * 5}px;
+        }
+
+        .m-xs-r-#{$px * 5} {
+            margin-right: #{$px * 5}px;
+        }
+
+        .m-xs-l-#{$px * 5} {
+            margin-left: #{$px * 5}px;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["plugins.sass"],"names":[],"mappings":"AAAA,0DAAO;AACP,gEAAO;AACP,qFAAO","file":"plugins.css","sourcesContent":["@import '../plugins/bootstrap-4/css/bootstrap.min.css';\n@import '../plugins/font-awesome-4.7.0/css/font-awesome.css';\n@import '../plugins/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css';\n"]}

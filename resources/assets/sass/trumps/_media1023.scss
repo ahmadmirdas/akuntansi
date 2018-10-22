@@ -1,0 +1,35 @@
+@media (max-width: 1023px) {
+    @for $px from 0 through 50 {
+        .p-lg-b-#{$px * 5} {
+            padding-bottom: #{$px * 5}px;
+        }
+
+        .p-lg-t-#{$px * 5} {
+            padding-top: #{$px * 5}px;
+        }
+
+        .p-lg-r-#{$px * 5} {
+            padding-right: #{$px * 5}px;
+        }
+
+        .p-lg-l-#{$px * 5} {
+            padding-left: #{$px * 5}px;
+        }
+
+        .m-lg-b-#{$px * 5} {
+            margin-bottom: #{$px * 5}px;
+        }
+
+        .m-lg-t-#{$px * 5} {
+            margin-top: #{$px * 5}px;
+        }
+
+        .m-lg-r-#{$px * 5} {
+            margin-right: #{$px * 5}px;
+        }
+
+        .m-lg-l-#{$px * 5} {
+            margin-left: #{$px * 5}px;
+        }
+    }
+}

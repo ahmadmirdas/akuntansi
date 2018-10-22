@@ -1,0 +1,59 @@
+/**
+ * Elements
+ */
+@mixin title($weight, $size, $with-tt: true) {
+    @if $with-tt { text-transform: _tt(cap); }
+    font: {
+        weight: #{$weight};
+        size: #{$size};
+    }
+}
+
+/* ----- Title ----- */
+    .title--sbold { font-weight: 600; }
+
+    .title-1 { @include title(_font('w400'), '30px'); }
+
+    .title-2 {
+        @include title(_font('w400'), '24px');
+        line-height: 1;
+    }
+
+    .title-3 {
+        @include title(_font('w400'), '24px');
+        color: #333;
+        
+        i {
+            margin-right: 13px;
+            vertical-align: baseline;
+        }
+    }
+
+    .title-4 {
+        @include title(_font('w500'), '30px', false);
+        color: #393939;
+    }
+
+    .title-5 {
+        @include title(_font('w500'), '24px');
+        color: #393939;
+    }
+
+    .title-6 {
+        @include title(_font('w500'), '24px', false);
+        color: $white;
+    }
+
+    .heading-title {
+        @include title(_font('w500'), '24px');
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+/* ----- Links ----- */
+    a {
+        display: _dp(in-block);
+        &:hover, &:focus, &:active { @include none(text-decoration, outline); }
+        &:hover { @include transition(_trans(p3)); }
+        @include transition(_trans(p3)); 
+    }

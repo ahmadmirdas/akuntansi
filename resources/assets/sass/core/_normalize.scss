@@ -1,0 +1,39 @@
+    * {
+        margin: 0;
+        padding: 0;
+        @include box_sizing(_sizing(b-box));
+    }
+
+    ul { margin: 0; }
+
+    button {
+        cursor: pointer;
+
+        &:focus { @include none(outline); }
+        @extend input;
+        @include none(background);
+    }
+
+    input {
+        border: none;
+
+        &:focus { @extend button:focus; }
+    }
+
+    textarea {
+        @extend input;
+        &:focus { @extend button:focus; }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p { margin: 0; }
+
+    .table-responsive { padding-right: 1px; }
+
+    .card { @include border_radius('3px'); }
+
+    .btn { @include border_radius('3px'); }

@@ -1,0 +1,81 @@
+
+/**  
+ * Singles Variables
+ */
+	$body-bg: #f8fafc;
+
+	// primary colors
+	$blue: 		#3490dc;
+	$indigo: 	#6574cd;
+	$purple: 	#9561e2;
+	$pink: 		#f66D9b;
+	$red_: 		#e3342f;
+	$orange: 	#f6993f;
+	$yellow: 	#ffed4a;
+	$green: 	#38c172;
+	$teal: 		#4dc0b5;
+	$cyan: 		#6cb2eb;
+	$black: 	#000;
+	$white: 	#fff;
+
+/**  
+ * Map Variables
+ */
+	/* Box sizing */
+		$boxs-sizing: (
+			b-box: 		border-box,
+			c-box: 		content-box,
+			default: 	initial,
+			inherit: 	inherit
+		);
+
+	/* Displays */
+		$displays: (
+			block: 		block,
+			in-block: 	inline-block
+		);
+
+
+	/* Transitions */
+		$trans: (
+			p3: 0.3s,
+			p5: 0.5s
+		);
+
+	/* Font Weight properties */
+		$fonts: (	
+			poppin: 	"Poppins",
+			poppins: 	#{"Poppins", sans-serif},
+			w100: 		100,
+			w200: 		200,
+			w300: 		300,
+			w400: 		400,
+			w500: 		500,
+			w600: 		600,
+			w700: 		700,
+			w800: 		800,
+			w900: 		900
+		);
+
+	/* Posistion properties */
+		$pos: (
+			abs: 		absolute,
+			fix:        fixed,
+			rel: 		relative
+		);
+	
+	/* Text Transform properties */
+		$text-trans: (
+			cap: 		capitalize,
+			bol: 		bold,
+			itl: 		italic,
+			nor: 		normal,
+			upc: 		uppercase,
+			loc: 		lowercase
+		);
+
+
+
+
+
+

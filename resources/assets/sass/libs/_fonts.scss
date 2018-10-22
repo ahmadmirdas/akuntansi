@@ -1,0 +1,117 @@
+/* POPPINS FONT - latin 100 */
+	@font-face {
+		@include poppins("normal", 100, '100',
+			local('Poppins Thin'), local('Poppins-Thin'));	
+	}
+
+/* POPPINS FONT - latin 200  */
+	@font-face {
+		@include poppins("normal", 200, '200',
+			local('Poppins ExtraLight'), local('Poppins-ExtraLight'));	
+	}
+
+/* POPPINS FONT - italic 200 */
+	@font-face {
+		@include poppins("italic", 200, '200italic',
+			local('Poppins ExtraLight Italic'), local('Poppins-ExtraLightItalic'));	
+	}
+
+/* POPPINS FONT - italic 100 */
+	@font-face {
+		@include poppins("italic", 100, '100italic',
+			local('Poppins Thin Italic'), local('Poppins-ThinItalic'));	
+	}
+
+/* POPPINS FONT - latin 300 */
+	@font-face {
+		@include poppins("normal", 300, '300',
+			'../../fonts/poppins/poppins-v5-latin-'
+			local('Poppins Light'), local('Poppins-Light'));
+	}
+
+/* POPPINS FONT - italic 300 */
+	@font-face {
+		@include poppins("italic", 300, '300italic',
+			local('Poppins Light Italic'), local('Poppins-LightItalic'));
+	}
+
+/* POPPINS FONT REGULAR - latin 400 */
+	@font-face {
+		@include poppins("normal", 400, 'regular',
+			local('Poppins Regular'), local('Poppins-Regular'));
+	}
+
+/* POPPINS FONT - italic 400 */
+	@font-face {
+		@include poppins("italic", 400, 'italic',
+			local('Poppins Italic'), local('Poppins-Italic'));
+	}
+
+/* POPPINS FONT - latin 500 */
+	@font-face {
+		@include poppins("normal", 500, '500',
+			local('Poppins Medium'), local('Poppins-Medium'));
+	}
+
+/* POPPINS FONT - italic 500 */
+	@font-face {
+		@include poppins("italic", 500, '500italic',
+			local('Poppins Medium Italic'), local('Poppins-MediumItalic'));
+	}
+
+/* POPPINS FONT - latin 600 */
+	@font-face {
+		@include poppins("normal", 600, '600',
+			local('Poppins SemiBold'), local('Poppins-SemiBold'));
+	}
+
+/* POPPINS FONT - italic 600 */
+	@font-face {
+		@include poppins("italic", 600, '600italic',
+			local('Poppins SemiBold Italic'), local('Poppins-SemiBoldItalic'));
+	}
+
+/* POPPINS FONT - latin 700 */
+	@font-face {
+		@include poppins("normal", 700, '700',
+			local('Poppins Bold'), local('Poppins-Bold'));
+	}
+
+/* POPPINS FONT - intalic 700 */
+	@font-face {
+		@include poppins("italic", 700, '700italic',
+			local('Poppins Bold Italic'), local('Poppins-BoldItalic'));
+	}
+
+/* POPPINS FONT - latin 800 */
+	@font-face {
+		@include poppins("normal", 800, '800',
+			local('Poppins ExtraBold'), local('Poppins-ExtraBold'));
+	}
+
+/* POPPINS FONT - italic 800 */
+	@font-face {
+		@include poppins("italic", 800, '800italic',
+			local('Poppins ExtraBold Italic'), local('Poppins-ExtraBoldItalic'));
+	}
+
+/* POPPINS FONT - latin 900 */
+	@font-face {
+		@include poppins("normal", 900, '900',
+			local('Poppins Black'), local('Poppins-Black'));
+	}
+
+/* POPPINS FONT - italic 900 */
+	@font-face {
+		@include poppins("italic", 900, '900italic',
+			local('Poppins Black Italic'), local('Poppins-BlackItalic'));
+	}
+
+/* FONT AWESOME 4 */
+@import '~font-awesome/scss/font-awesome';
+
+/* FONT AWESOME 5 */
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+/* MATERIAL DESIGN ICONIC FONT */
+@import '~material-design-iconic-font/scss/material-design-iconic-font';

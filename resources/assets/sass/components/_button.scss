@@ -1,0 +1,184 @@
+/* ----- Buttons----- */
+.au-btn {
+    line-height: 45px;
+    padding: 0 35px;
+    text-transform: _tt(upc);
+    color: $white;
+    @include border_radius('3px');
+    @include transition(_trans(p3));
+    cursor: pointer;
+
+    &::hover {
+        color: $white;
+        background: #3868cd;
+    }
+}
+
+.au-btn--blue2 {
+    background: #00aced;
+
+    &:hover {
+        background: #00a2e3;
+    }
+}
+
+.au-btn--block {
+    display: block;
+    width: 100%;
+
+    i {
+        vertical-align: baseline;
+        margin-right: 5px;
+    }
+}
+
+.au-btn--blue { background: #4272d7; }
+
+.au-btn--green {
+    background: #63c76a;
+
+    &:hover {
+        background: #59bd60;
+    }
+}
+
+
+.au-btn-plus {
+    position: _pos(abs);
+    height: 45px;
+    width: 45px;
+    background: #63c76a;
+    @include border_radius('100%');
+    @include transition(_trans(p3));
+    bottom: -22.5px;
+    right: 45px;
+    z-index: 3;
+
+    i {
+        position: _pos(abs);
+        top: 50%;
+        left: 50%;
+        @include translate('-50%');
+        font-size: 15px;
+        font-weight: _font(w500);
+        color: $white;
+    }
+
+    &:hover { background: #59bd60; }
+}
+
+
+.au-btn-load {
+    background: #808080;
+    padding: 0 40px;
+    font-size: 15px;
+    color: $white;
+
+    &:hover { background: #767676; }
+}
+
+
+.au-btn-filter {
+    font-size: 14px;
+    color: #808080;
+    background: $white;
+    @include border_radius('3px');
+    @each $shadow in -webkit-box, -moz-box, box {
+        #{$shadow}-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);}
+    padding: 0 15px;
+    line-height: 40px;
+    text-transform: _tt(cap);
+
+    i { margin-right: 5px; }
+}
+
+.au-btn--small {
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+/*Page Loader*/
+.page-loader {
+    background: #f8f8f8;
+    bottom: 0;
+    left: 0;
+    position: _pos(fix);
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.page-loader__spin {
+    width: 35px;
+    height: 35px;
+    position: _pos(abs);
+    top: 50%;
+    left: 50%;
+    border-top: 6px solid #f6f6f6;
+    border-right: 6px solid #f6f6f6;
+    border-bottom: 6px solid #f6f6f6;
+    border-left: 6px solid #1b1b1b;
+    @include border_radius('50%');
+    -webkit-animation: spinner 1000ms infinite linear;
+    -moz-animation: spinner 1000ms infinite linear;
+    -o-animation: spinner 1000ms infinite linear;
+    animation: spinner 1000ms infinite linear;
+    z-index: 100000;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
