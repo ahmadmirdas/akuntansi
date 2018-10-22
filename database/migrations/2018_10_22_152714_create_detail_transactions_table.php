@@ -17,6 +17,7 @@ class CreateDetailTransactionsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('transaction_id');
             $table->unsignedInteger('account_id');
+            $table->string('description');
             $table->float('nominal');
             $table->timestamps();
 
