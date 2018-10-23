@@ -11,7 +11,7 @@ main.preview .index-card { background-color: #f7f7f7; margin: 0 auto; width: 370
 
 @media only screen and (max-width: 767px) { main.preview .index-card { width: 100%; } }
 
-main.preview .index-card .index-card-label { background-color: #18a566; color: #fff; padding: 17px 0; text-align: center; font-size: 10px; text-transform: uppercase; letter-spacing: 3px; }
+main.preview .index-card .index-card-label { background-color: #5EA7FE; color: #fff; padding: 17px 0; text-align: center; font-size: 10px; text-transform: uppercase; letter-spacing: 3px; }
 
 main.preview .index-card .index-card-header { padding: 20px 0; }
 
@@ -23,7 +23,7 @@ main.preview .index-card .index-card-list-wrap { min-height: 366px; border-top: 
 
 main.preview .index-card .index-card-list-wrap .index-card-item a { position: relative; display: block; text-align: left; line-height: 60px; padding: 0 15px; border-top: 1px solid #E2E2E2; text-decoration: none; color: #777; }
 
-main.preview .index-card .index-card-list-wrap .index-card-item a:hover { background-color: #18a566; color: #fff; border-top: 1px solid #12784a; }
+main.preview .index-card .index-card-list-wrap .index-card-item a:hover { background-color: #5EA7FE; color: #fff; border-top: 1px solid #12784a; }
 
 main.preview .index-card .index-card-list-wrap .index-card-item.has-child a:after { content: "\f078"; font-family: FontAwesome; font-size: 12px; position: absolute; right: 15px; transition: -webkit-transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
 
