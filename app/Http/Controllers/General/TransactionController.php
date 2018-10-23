@@ -12,56 +12,53 @@ use Illuminate\Http\Request;
 
 class TransactionController extends Controller
 {
-	public function index()
-	{
-		return view("pages.transaction.index");
-	}    
+    public function index()
+    {
+        $data['data'] = DetailTransaction::all();
 
-	public function create()
-	{
-		$accounts = Account::all();
+        return view('pages.transaction.index', compact('data'));
+    }
 
-		$transactions = Transaction::all();
+    public function create()
+    {
+        $accounts = Account::all();
 
-		return view("pages.transaction.create", compact('accounts', 'transactions'));
-	}
+        $transactions = Transaction::all();
 
-	public function store(Request $request)
-	{
-		$selectAkun = DB::table('accounts')->where('id', $request->get('account_id'))->first();
-		$cekTransaksi = DB::table('transactions')->where('id', $request->get('transaction_id'))->first();
+        return view('pages.transaction.create', compact('accounts', 'transactions'));
+    }
 
-		if ($cekTransaksi->type == 'D') {
-			
-			$account = Account::findOrFail($request->get('account_id'));
+    public function store(Request $request)
+    {
+        $selectAkun = DB::table('accounts')->where('id', $request->get('account_id'))->first();
+        $cekTransaksi = DB::table('transactions')->where('id', $request->get('transaction_id'))->first();
 
-			$accountInitSaldo = $account->init_saldo;
+        if ($cekTransaksi->type == 'D') {
+            $account = Account::findOrFail($request->get('account_id'));
 
-			$totalSaldo = $request->get('nominal');
+            $accountInitSaldo = $account->init_saldo;
 
-			$totalSemua = $accountInitSaldo + $totalSaldo;
+            $totalSaldo = $request->get('nominal');
 
-			$account->update(['init_saldo' => $totalSemua]);
+            $totalSemua = $accountInitSaldo + $totalSaldo;
 
-		} else {
+            $account->update(['init_saldo' => $totalSemua]);
+        } else {
+            $account = Account::findOrFail($request->get('account_id'));
 
-			$account = Account::findOrFail($request->get('account_id'));
+            $accountInitSaldo = $account->init_saldo;
 
-			$accountInitSaldo = $account->init_saldo;
+            $totalSaldo = $request->get('nominal');
 
-			$totalSaldo = $request->get('nominal');
+            $totalSemua = $accountInitSaldo - $totalSaldo;
 
-			$totalSemua = $accountInitSaldo - $totalSaldo;
+            $account->update(['init_saldo' => $totalSemua]);
+        }
 
-			$account->update(['init_saldo' => $totalSemua]);
+        $input = $request->except('_token');
+        $input['created_at'] = Carbon::parse($input['created_at'])->format('Y-m-d H:i:s');
+        DetailTransaction::create($input);
 
-		}
-
-
-		$input = $request->except('_token');
-		$input['created_at'] = Carbon::parse($input['created_at'])->format('Y-m-d H:i:s');
-		DetailTransaction::create($input);
-
-		return redirect()->route('transaction');
-	}
+        return redirect()->route('transaction');
+    }
 }

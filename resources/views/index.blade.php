@@ -16,7 +16,7 @@
             </div>
         </main>
         <footer>
-            <div class="content-wrap">Copyright &copy; 2018. Inspirasi Digital Eksperiensia, PT company.</div>
+            <div class="content-wrap">Copyright &copy; 2018. Hendro Rahmat Saputro.</div>
         </footer>
     </div>
     </body>
